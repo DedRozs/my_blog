@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "base/base.html" %}
+
+{% block title %} Home {% endblock title %}
+<!-- Page Specific CSS goes HERE  -->
+{% block stylesheets %}
+
+{% endblock stylesheets %}
+
+{% block content %}
+
+<div class="container align-items-center justify-content-center">
+    <div class="card " style="align-items:center;" id="fade">
+        <div class="card-header" >
+            <h1>
+                Welcome
+            </h1>
+        </div>
+        <div class="card-body d-inline-flex">
+            <div class="row justify-content-center align-items-center" style="margin: 10px; display: flex;">
+                <div class="col-lg-4">
+                    <div class="photo">
+                        <img src="/static/assets/img/personal/ProfessionalHeadshot.jpg" alt="Profile Photo" width="300px">
+                    </div>
+                </div>
+                <div class="col-lg-4 card text-center bg-dark " style="border-radius:10px; height:fit-content; margin:20px;">
+                    <div class="card-header align-items-center bg-dark" style="border-radius:10px;">
+                        <h4>
+                            My Name is Joseph Prince
+                        </h4>
+                        <p> 
+                            First I would like to start off with this. Thank you for taking the time out of your day to check me out. 
+                            On this website, you can find my links to my blog, certifications, and past projects.
+                        </p>
+                        <br>
+                        <p>
+                            Feel free to look around, Start by clicking a button below to enter.
+                        </p>
+                    </div>
+                    <br>
+                    <a href="{% url 'bloglanding' %}" >
+                        <button class="btn btn-primary btn-round animation-on-hover" >
+                            Blog
+                        </button>
+                    </a>
+                    <br>
+                    <a href="{% url 'projects_landing' %}" >
+                        <button class="btn btn-primary btn-round animation-on-hover" >
+                            Projects
+                        </button>
+                    </a>
+                    <br>
+                    <a href="{% url 'certslanding' %}" >
+                        <button class="btn btn-primary btn-round animation-on-hover" >
+                            Certifications
+                        </button>
+                    </a>
+                    <br>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
+<!-- Page Specific JS goes HERE -->
+{% block javascripts %}
+<script>
+    $(function(){  // $(document).ready shorthand
+    $('#fade').hide().fadeIn('slow');
+    });
+</script>
+{% endblock javascripts %}
+</html>
