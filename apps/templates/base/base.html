@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>
+        My Portfolio - {% block title %} {% endblock title %} | Joseph Prince
+    </title>
+
+    <!-- Nucleo Icons -->
+    <link href="/static/assets/css/nucleo-icons.css" rel="stylesheet" />
+    <!-- CSS Files -->
+    <link href="/static/assets/css/black-dashboard.css?v=1.1.1" rel="stylesheet" />
+
+    <!--  Page Specific CSS goes HERE  -->
+    {% block stylesheets %}{% endblock stylesheets %}
+    {% load static %}
+</head>
+
+<body class="sidebar-mini {% block bodyclass %}{% endblock %}">
+
+    <div class="wrapper">
+
+        <div class="navbar-minimize-fixed">
+        <button class="minimize-sidebar btn btn-link btn-just-icon">
+            <i class="tim-icons icon-align-center visible-on-sidebar-regular text-muted"></i>
+            <i class="tim-icons icon-bullet-list-67 visible-on-sidebar-mini text-muted"></i>
+        </button>
+        </div>
+
+        {% include 'base/sidebar.html' %}
+
+        <div class="main-panel">
+
+            {% include 'base/navigation.html' %}
+
+            <div class="content" >
+
+                {% block content %}{% endblock content %}
+
+            </div>
+
+            {% include 'base/footer.html' %}
+
+        </div>
+
+    </div>
+
+    {% include 'base/scripts.html' %}
+
+    {% include 'base/scripts-sidebar.html' %}
+
+    <!-- Specific Page JS goes HERE  -->
+    {% block javascripts %}{% endblock javascripts %}
+
+</body>
+</html>
