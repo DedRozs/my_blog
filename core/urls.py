@@ -8,6 +8,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),          # Django admin route
     path('', include('apps.blog.urls')),
     path('projects/', include('apps.projects.urls')),
+    path('playground/', include('apps.playground.urls')),
 ]
 
 if settings.DEBUG:

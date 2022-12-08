@@ -18,7 +18,7 @@ SECRET_KEY = conf.SECRET_KEY
 DEBUG = config('DEBUG', default=True, cast=bool)
 
 # load production server from .env
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '10.0.0.220','thejosephprince.uc.r.appspot.com', config('SERVER', default='127.0.0.1')]
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '10.0.0.220','thejosephprince.uc.r.appspot.com', 'thejosephprince.com', 'www.thejosephprince.com', config('SERVER', default='127.0.0.1')]
 
 # Application definition
 
@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'apps.home',  # Enable the inner home (home)
     'apps.blog' ,
     'apps.projects'  ,
+    'apps.playground'  ,
 ]
 
 MIDDLEWARE = [
