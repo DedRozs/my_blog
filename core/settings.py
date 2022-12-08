@@ -134,11 +134,11 @@ STATICFILES_DIRS = (
 MEDIA_ROOT = os.path.join(CORE_DIR, 'media')
 #############################################################
 #############################################################
-GS_BUCKET_NAME = "thejosephprince.appspot.com" 
+GS_BUCKET_NAME = "mainportfolio.appspot.com" 
     
 DEFAULT_FILE_STORAGE = "storages.backends.gcloud.GoogleCloudStorage"
     
-MEDIA_URL = "gs://thejosephprince.appspot.com/"
+MEDIA_URL = "gs://mainportfolio.appspot.com/"
 
 GS_CREDENTIALS = service_account.Credentials.from_service_account_file(
     os.path.join(CORE_DIR, "creds.json")
