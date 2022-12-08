@@ -16,7 +16,7 @@
 
     <!--  Page Specific CSS goes HERE  -->
     {% block stylesheets %}{% endblock stylesheets %}
-
+    {% load static %}
 </head>
 
 <body class="sidebar-mini {% block bodyclass %}{% endblock %}">
@@ -36,7 +36,7 @@
 
             {% include 'base/navigation.html' %}
 
-            <div class="content">
+            <div class="content" >
 
                 {% block content %}{% endblock content %}
 

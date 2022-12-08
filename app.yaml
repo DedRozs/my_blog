@@ -1,0 +1,8 @@
+runtime: python39
+entrypoint: gunicorn -b :$PORT core.wsgi:application --timeout 90
+
+handlers:
+  - url: /staticfiles
+    static_dir: staticfiles/
+  - url: /.*
+    script: auto

@@ -1,0 +1,6 @@
+[client]
+database = portfolio
+host = 194.195.92.39
+user = root
+password = JuanPaco#1993
+default-character-set = utf8
